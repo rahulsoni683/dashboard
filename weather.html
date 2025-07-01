@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities Dashboard - Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Smart Cities Dashboard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="traffic.html">Traffic</a></li>
+            <li><a href="weather.html" class="active">Weather</a></li>
+            <li><a href="pollution.html">Pollution</a></li>
+            <li><a href="air-quality.html">Air Quality</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="weather-header">
+            <h1>Real-Time Weather Information</h1>
+            <div class="city-info">
+                <h2 id="currentCity">Select a city from the home page</h2>
+            </div>
+        </section>
+
+        <section class="current-weather">
+            <div class="weather-card">
+                <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="weather-info">
+                    <div class="temperature" id="temperature">--°C</div>
+                    <div class="weather-description" id="weatherDescription">--</div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <i class="fas fa-wind"></i>
+                            <span id="windSpeed">-- km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity">--%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            <span id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-container" id="forecastContainer">
+                <!-- Forecast cards will be added here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart Cities Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html> 

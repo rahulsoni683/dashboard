@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities Dashboard - Traffic</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/traffic.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Smart Cities Dashboard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="traffic.html" class="active">Traffic</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="pollution.html">Pollution</a></li>
+            <li><a href="air-quality.html">Air Quality</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="traffic-header">
+            <h1>Real-Time Traffic Monitoring</h1>
+            <div class="city-info">
+                <h2 id="currentCity">Select a city from the home page</h2>
+                <div id="trafficError" style="color: red; margin-top: 0.5rem;"></div>
+            </div>
+        </section>
+
+        <section class="traffic-stats">
+            <div class="stat-card">
+                <h3>Current Traffic Level</h3>
+                <div class="stat-value" id="trafficLevel">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Average Speed</h3>
+                <div class="stat-value" id="avgSpeed">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Congestion Index</h3>
+                <div class="stat-value" id="congestionIndex">-</div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+        <section class="traffic-legend">
+            <h3>Traffic Level Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="color-box" style="background-color: #4CAF50;"></span>
+                    <span>Free Flow</span>
+                </div>
+                <div class="legend-item">
+                    <span class="color-box" style="background-color: #FFC107;"></span>
+                    <span>Moderate</span>
+                </div>
+                <div class="legend-item">
+                    <span class="color-box" style="background-color: #FF9800;"></span>
+                    <span>Heavy</span>
+                </div>
+                <div class="legend-item">
+                    <span class="color-box" style="background-color: #F44336;"></span>
+                    <span>Severe</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Smart Cities Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/traffic.js"></script>
+</body>
+</html> 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities Dashboard - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Smart Cities Dashboard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="traffic.html">Traffic</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="pollution.html">Pollution</a></li>
+            <li><a href="air-quality.html">Air Quality</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="search-section">
+            <h1>Welcome to Smart Cities Dashboard</h1>
+            <p>Real-time monitoring of traffic, weather, pollution, and air quality data for smarter urban living.</p>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name...">
+                <button id="searchBtn">Search</button>
+            </div>
+        </section>
+
+        <section class="map-container">
+            <div id="map"></div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Real-Time Traffic</h3>
+                <p>Monitor live traffic conditions with color-coded indicators for different congestion levels.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Weather Updates</h3>
+                <p>Get accurate weather forecasts and current conditions for your selected city.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Pollution Levels</h3>
+                <p>Track various pollution parameters with detailed graphs and real-time data.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Air Quality Index</h3>
+                <p>Monitor air quality metrics with comprehensive visualizations and statistics.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <footer>
+        <p>&copy; 2025 Smart Cities Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

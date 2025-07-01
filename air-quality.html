@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities Dashboard - Air Quality</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/air-quality.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Smart Cities Dashboard</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="traffic.html">Traffic</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="pollution.html">Pollution</a></li>
+            <li><a href="air-quality.html" class="active">Air Quality</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="air-quality-header">
+            <h1>Real-Time Air Quality Monitoring</h1>
+            <div class="city-info">
+                <h2 id="currentCity">Select a city from the home page</h2>
+            </div>
+        </section>
+
+        <section class="air-quality-main">
+            <div class="aqi-overview">
+                <div class="aqi-value-container">
+                    <h3>Current AQI</h3>
+                    <div class="aqi-value" id="aqiValue">-</div>
+                    <div class="aqi-status" id="aqiStatus">-</div>
+                    <p class="aqi-description" id="aqiDescription">-</p>
+                </div>
+            </div>
+
+            <div class="pollutants-grid">
+                <div class="pollutant-card">
+                    <h4>Ozone (O3)</h4>
+                    <div class="pollutant-value" id="o3">-</div>
+                    <div class="pollutant-trend" id="o3Trend">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>0%</span>
+                    </div>
+                </div>
+                <div class="pollutant-card">
+                    <h4>Carbon Monoxide (CO)</h4>
+                    <div class="pollutant-value" id="co">-</div>
+                    <div class="pollutant-trend" id="coTrend">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>0%</span>
+                    </div>
+                </div>
+                <div class="pollutant-card">
+                    <h4>Nitrogen Dioxide (NO2)</h4>
+                    <div class="pollutant-value" id="no2">-</div>
+                    <div class="pollutant-trend" id="no2Trend">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>0%</span>
+                    </div>
+                </div>
+                <div class="pollutant-card">
+                    <h4>Sulfur Dioxide (SO2)</h4>
+                    <div class="pollutant-value" id="so2">-</div>
+                    <div class="pollutant-trend" id="so2Trend">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="air-quality-charts">
+            <div class="chart-container">
+                <h3>Hourly AQI Trend</h3>
+                <canvas id="hourlyChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Monthly Average AQI</h3>
+                <canvas id="monthlyChart"></canvas>
+            </div>
+        </section>
+
+        <section class="air-quality-map">
+            <h3>Air Quality Map</h3>
+            <div id="aqiMap"></div>
+        </section>
+    </main>
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/air-quality.js"></script>
+    <footer>
+        <p>&copy; 2025 Smart Cities Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
