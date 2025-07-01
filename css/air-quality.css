@@ -1,0 +1,210 @@
+/* Air Quality Page Styles */
+.air-quality-header {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.air-quality-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.city-selector {
+    margin-top: 1rem;
+}
+
+.city-selector label {
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.city-selector select {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.air-quality-overview {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aqi-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.aqi-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #4CAF50;
+    margin: 1rem 0;
+}
+
+.aqi-status {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.aqi-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.pollutant-details {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pollutant-details h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.pollutant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.pollutant-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pollutant-card h4 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.pollutant-value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.pollutant-trend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.pollutant-trend i {
+    font-size: 0.8rem;
+}
+
+.pollutant-trend i.fa-arrow-up {
+    color: #dc3545;
+}
+
+.pollutant-trend i.fa-arrow-down {
+    color: #28a745;
+}
+
+.air-quality-trends {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.trend-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trend-card h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* AQI Status Colors */
+.status-good {
+    background-color: #00e400;
+    color: white;
+}
+
+.status-moderate {
+    background-color: #ffff00;
+    color: #333;
+}
+
+.status-unhealthySensitive {
+    background-color: #ff7e00;
+    color: white;
+}
+
+.status-unhealthy {
+    background-color: #ff0000;
+    color: white;
+}
+
+.status-veryUnhealthy {
+    background-color: #99004c;
+    color: white;
+}
+
+.status-hazardous {
+    background-color: #7e0023;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .air-quality-overview {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .pollutant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .air-quality-trends {
+        grid-template-columns: 1fr;
+    }
+
+    .air-quality-header {
+        padding: 1.5rem;
+    }
+
+    .air-quality-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .aqi-value {
+        font-size: 3rem;
+    }
+} 
